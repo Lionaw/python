@@ -12,4 +12,4 @@ plt.ylabel("Square of Value",fontsize=14)
 plt.tick_params(axis='both',which='major',labelsize=14)
 #坐标取值范围
 plt.axis([0,1000,0,1100000])
-plt.savefig('15\squares_plot.png',bbox_inches='tight')
+plt.show()
