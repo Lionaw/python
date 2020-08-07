@@ -32,7 +32,8 @@ def new_topic(request):
         #POST提交的数据，对数据进行处理
         form = TopicForm(request.POST)
         if form.is_valid():
-            form.save()
+            new_topic = form.save(commit=False)
+            new_topic.save()
             return HttpResponseRedirect(reverse('learning_logs:topics'))
     context = {'form':form}
     return render(request,'learning_logs/new_topic.html',context)
