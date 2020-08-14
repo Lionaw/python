@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.conf.urls import url,include
 
 urlpatterns = [
-    url(r'^admin',include(admin.site.urls)),
-    url(r'^users',include(('users.urls','users'),namespace='users')),
+    url(r'^admin/',admin.site.urls),
+    url(r'^users/',include(('users.urls','users'),namespace='users')),
     url(r'',include('learning_logs.urls',namespace='learning_logs')),
 ]
